@@ -6,7 +6,8 @@ html {
 }
 
 body {
-  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
   font-size: 1em;
   margin: 0;
   padding: 0;
@@ -97,7 +98,7 @@ canvas {
   margin-left: auto;
   border-radius: 10px;
   background: rgb(26, 26, 26);
-  background: linear-gradient(90deg, rgba(26, 26, 26, 0.6334908963585435) 0%, rgba(102, 102, 96, 0.2329306722689075) 100%);
+  background: rgba(0, 0, 0, 0);
 }
 
 .ui-content-mobile {
@@ -129,8 +130,8 @@ canvas {
 .score-display-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: start;
+  justify-content: start;
   margin-top: 1em;
 }
 
@@ -140,11 +141,10 @@ canvas {
 }
 
 .word-input-container {
-  width: 90%;
+  max-width: 330px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 5% !important;
   margin-top: .7em;
 }
 
@@ -159,21 +159,21 @@ canvas {
 .button-controls-container {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  align-items: start;
+  justify-content: start;
   width: 100%;
 }
 
 .check-button {
   width: 7em;
-  border-radius: 0em 2em 2em 0em;
   border-color: grey !important;
+  border-radius: 0px 5px 5px 0px;
 }
 
 .control-button {
   width: 200px;
-  height: 1.5em;
-  border-radius: .75em;
+  height: auto;
+  border-radius: 5px;
   margin-left: .3em;
   margin-right: .3em;
 }
@@ -186,6 +186,7 @@ canvas {
   border-style: solid;
   background: none;
   cursor: pointer;
+  padding: 10px;
 
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent;
@@ -235,14 +236,15 @@ canvas {
 }
 
 .guessword-input {
-  border-radius: 2em 0em 0em 2em;
   border-color: grey rgba(0, 0, 0, 0) grey grey;
   border-style: solid;
+  border-radius: 5px 0px 0px 5px;
   border-width: thin !important;
   width: 100%;
   height: 1.2em;
   font-size: 1.2em;
-  padding: 0.1em 1em 0.1em 1em;
+  padding: 10px;
+  padding-left: 20px;
   background: none;
   color: white;
 }
@@ -278,8 +280,8 @@ hr {
   align-items: center;
   cursor: pointer;
   height: 20px;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: 30px;
+  margin-bottom: 20px;
 
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent;
@@ -288,6 +290,7 @@ hr {
 .collapsible-content {
   padding: 0 18px;
   max-height: 0;
+  max-width: 330px;
   overflow: hidden;
   transition: max-height 0.25s ease-out;
 }
@@ -300,7 +303,7 @@ hr {
 .quality-buttons-container {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: start;
   width: 100%;
 }
 
@@ -310,11 +313,11 @@ hr {
 }
 
 .quality-left {
-  border-radius: 2em 0em 0em 2em;
+  border-radius: 5px 0em 0em 5px;
 }
 
 .quality-right {
-  border-radius: 0em 2em 2em 0em;
+  border-radius: 0em 5px 5px 0em;
 }
 
 .quality-selected {
@@ -331,7 +334,7 @@ hr {
   background: linear-gradient(to right, whitesmoke 0%, whitesmoke 50%, rgb(109, 109, 109) 50%, rgb(109, 109, 109) 100%);
   border: none;
   border-radius: 3px;
-  height: 5px;
+  height: 10px;
   width: 100%;
   outline: none;
 }
@@ -352,6 +355,8 @@ hr {
   width: 100%;
   height: 2em;
   flex-wrap: nowrap;
+  margin-top: 10px;
+  margin-bottom: 10px;
   align-items: center;
 }
 

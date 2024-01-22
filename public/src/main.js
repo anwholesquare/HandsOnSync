@@ -1,4 +1,4 @@
-import * as FSP from './FSP.js';
+import * as FSP from './handsonsync.js';
 
 let wordToGuess;
 let wordList = [];
@@ -107,6 +107,7 @@ window.addEventListener('resize', resizeUI);
 
 function setNewWordToGuess() {
     wordToGuess = wordList[Math.floor(Math.random() * wordList.length)].replace(/[\r\n]+/gm, '');
+    console.log(wordToGuess)
 }
 
 // load word list could be replaced to fetch the list from another source
@@ -132,7 +133,7 @@ function checkWordGuess() {
     userGuessInput.value = '';
 
     score = score + 1 * (userGuess == wordToGuess) - 1 * (userGuess != wordToGuess);
-    scoreDisplay.innerHTML = `Score: ${score}`;
+    scoreDisplay.innerHTML = `<b>Gained Point</b>&nbsp; ${score}`;
 
     let counterElement = document.createElement('p');
     counterElement.classList.add('score-point-effect');
@@ -322,30 +323,28 @@ window.addEventListener('keyup', (event) => {
     if (!currentlyPlaying) {
         switch (event.key) {
             case 'r': // handle word generation
-                if (event.altKey) {
-                    setNewWordToGuess();
-                    showFeedbackMessage('New Word Generated');
-                }
+                setNewWordToGuess();
+                showFeedbackMessage('New Word Generated');
                 break;
             case ']': // increase speed
-                if (event.altKey && parseFloat(speedSlider.getAttribute('max')) > parseFloat(speedSlider.value)) {
+                if (parseFloat(speedSlider.getAttribute('max')) > parseFloat(speedSlider.value)) {
                     speedSlider.value = parseFloat(speedSlider.value) + 1;
                     updateSpeedSlider();
                     showFeedbackMessage(`Speed - ${speedValues[speedSlider.value - 1]}`);
                 }
                 break;
             case '[': // decrease speed
-                if (event.altKey && parseFloat(speedSlider.getAttribute('min')) < parseFloat(speedSlider.value)) {
+                if (parseFloat(speedSlider.getAttribute('min')) < parseFloat(speedSlider.value)) {
                     speedSlider.value = parseFloat(speedSlider.value) - 1;
                     updateSpeedSlider();
                     showFeedbackMessage(`Speed - ${speedValues[speedSlider.value - 1]}`);
                 }
                 break;
             case 'm': // toggle menu
-                if (event.altKey) {
-                    toggleCollapsible(settingsCollapsibleContent, settingsArrow);
-                    toggleCollapsible(infoCollapsibleContent, infoArrow);
-                }
+
+                toggleCollapsible(settingsCollapsibleContent, settingsArrow);
+                toggleCollapsible(infoCollapsibleContent, infoArrow);
+
                 break;
             default: // play the animation
                 if (event.code === 'Space' && !userGuessInputIsFocused) play();
@@ -440,12 +439,13 @@ async function init() {
 
     // expand the menus on first visit after a small delay for everything to have time to fade in
     // it is very important to keep the information section visible on first visit, whereas settings section can be hidden if desired
-    setTimeout(() => {
-        toggleCollapsible(settingsCollapsibleContent, settingsArrow);
-        toggleCollapsible(infoCollapsibleContent, infoArrow);
+    // setTimeout(() => {
+    //     toggleCollapsible(settingsCollapsibleContent, settingsArrow);
+    //     toggleCollapsible(infoCollapsibleContent, infoArrow);
 
-        FSP.handleWindowResize();
-    }, 500);
+    //     FSP.handleWindowResize();
+    // }, 500);
 }
 
 init();
+

@@ -118,8 +118,8 @@ function addGradientBackground() {
         document.body.clientHeight      // outer radius
     );
 
-    gradient.addColorStop(0, "#4f4f4f");
-    gradient.addColorStop(1, "#303030");
+    gradient.addColorStop(0, "#1f1f1f");
+    gradient.addColorStop(1, "#202020");
 
     context.fillStyle = gradient;
     context.fillRect(0, 0, document.body.clientWidth, document.body.clientHeight);
@@ -274,7 +274,7 @@ function buildAnimSequence(word) {
 function fingerspell(word, onFinishCallback) {
     // console.log(word)
     let actionSequence = buildAnimSequence(word);
-    // console.log(actionSequence)
+    console.log(actionSequence)
 
     isPlaying = true;
     mixer.timeScale = speed;

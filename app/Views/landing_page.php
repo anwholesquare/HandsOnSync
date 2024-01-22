@@ -1,12 +1,14 @@
 <!DOCTYPE html>
     <head>
-        <title>3D ASL Fingerspelling Practice</title>
+        <title>HandsOnSync</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" type="text/css" href="css/spinner.css">
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
         <script defer type="module" src="./src/main.js"></script>
     </head>
 
@@ -25,27 +27,26 @@
             <div class="ui-content" id="ui-content">
                 
                 <div class="score-display-container" id="score-display-container">
-                    <div id="score-display">Score: 0</div>
+                    <div id="score-display"> <b>Gained Point</b>&nbsp; 0</div>
                 </div>
                 
                 <div class="word-input-container">
                     <div class="guess-input-container">
                         <input type="text" class="guessword-input" id="guessword-input" placeholder="Your Guess">
-                        <button class="button check-button" id="check-button">Check</button>
+                        <button class="button check-button" id="check-button">Submit</button>
                     </div>
                     
                     <p class="word-input-message" id="word-input-message">Lorem ipsum dolor sit amet.</p>
                 </div>         
 
-                <div class="button-controls-container" id="button-controls-container">
-                    <button class="button control-button" id="new-word-button">New Word</button>
-                    <button class="button control-button fingerspell-button" id="play-button">Fingerspell</button>
+                <div class="button-controls-container" id="button-controls-container" style="max-width:330px;">
+                    <button class="button control-button" id="new-word-button" style="margin-left: 0;" >Change word</button>
+                    <button class="button control-button fingerspell-button" id="play-button">Spell word</button>
                 </div>
 
                 <div class="collapsible" id="settings-collapsible">
                     <i class="material-icons arrow-down" id="settings-arrow">expand_more</i>
-                    <p>Settings</p>
-                    <hr>
+                    <p>Advanced settings</p>
                 </div>
                 <div class="collapsible-content" id="settings-collapsible-content">
                     <div class="flex-grid">
@@ -61,9 +62,12 @@
                             <p class="slider-value-display" id="angle-slider-value">0</p>
                         </div>
 
-                        <div class="settings-row-container">
-                            <label class="setting-label">Quality</label> 
-                            <div class="quality-buttons-container">
+                        <div class="settings-row-container" style="margin-top:20px;margin-bottom:20px;flex-direction: column !important;justify-content: start;text-align: start;align-items: start; height:auto !Important;">
+                            <label class="setting-label" style="
+                                margin-bottom: 20px;
+                            ">Quality</label> 
+                            
+                            <div class="quality-buttons-container" >
                                 <button class="button quality-button quality-left" id="low-quality-button">Low</button>
                                 <button class="button quality-button quality-right quality-selected" id="high-quality-button">High</button>
                             </div>
@@ -71,13 +75,15 @@
                         </div>
                     </div>
                 </div>
+
                 
-                <div class="collapsible" id="info-collapsible">
+                
+                <div class="collapsible" id="info-collapsible" style="display:none;">
                     <i class="material-icons arrow-down" id="info-arrow">expand_more</i>
                     <p>Information</p>
                     <hr>
                 </div>
-                <div class="collapsible-content" id="info-collapsible-content">
+                <div class="collapsible-content" id="info-collapsible-content" style="display:none;">
                    
                     <table class="yellow" style="width:70%; margin-left: auto; margin-right: auto; margin-bottom: 20px;">
                         <tr>
