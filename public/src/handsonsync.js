@@ -141,9 +141,9 @@ function addGradientBackground() {
 function addHandModel(path) {
     return new Promise((resolve, reject) => {
         const textureLoader = new THREE.TextureLoader();
-        let handDiffuse = textureLoader.load('textures/diffuse.jpg', texture => texture.flipY = false, undefined, error => { reject(error) });
-        let handNormals = textureLoader.load('textures/normals_inverse_1k.png', texture => texture.flipY = false, undefined, error => { reject(error) });
-        let handSpecular = textureLoader.load('textures/roughness.jpg', texture => texture.flipY = false, undefined, error => { reject(error) });
+        let handDiffuse = textureLoader.load('../../../textures/diffuse.jpg', texture => texture.flipY = false, undefined, error => { reject(error) });
+        let handNormals = textureLoader.load('../../../textures/normals_inverse_1k.png', texture => texture.flipY = false, undefined, error => { reject(error) });
+        let handSpecular = textureLoader.load('../../../textures/roughness.jpg', texture => texture.flipY = false, undefined, error => { reject(error) });
 
         // load the hand model and set up animations
         const loader = new GLTFLoader();

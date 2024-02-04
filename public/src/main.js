@@ -113,7 +113,7 @@ function setNewWordToGuess() {
 // load word list could be replaced to fetch the list from another source
 // or alternatively make per-word requests
 async function loadWordList() {
-    wordList = await fetch('wordList').then(res => res.text()).then(text => text.split('\n'));
+    wordList = await fetch('../../../wordList').then(res => res.text()).then(text => text.split('\n'));
     setNewWordToGuess();
 }
 
@@ -321,8 +321,8 @@ playButton.addEventListener('click', play);
 
 window.addEventListener('keyup', (event) => {
     if (!currentlyPlaying) {
-        switch (event.key) {
-            case 'r': // handle word generation
+        switch (event.ctrlKey && event.key) {
+            case 'n': // handle word generation
                 setNewWordToGuess();
                 showFeedbackMessage('New Word Generated');
                 break;
@@ -414,7 +414,7 @@ function updateRangeSliderStyle(slider) {
 async function init() {
     loadWordList();
 
-    let err = await FSP.init('models/hand_animated_v6.glb');
+    let err = await FSP.init('../../../models/hand_animated_v6.glb');
     if (err) {
         ldsRing.style.opacity = '0';
         spinnerText.innerHTML = 'error loading assets';
