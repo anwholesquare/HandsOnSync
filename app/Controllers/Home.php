@@ -108,6 +108,11 @@ class Home extends BaseController
         }
     }
 
+    public function generate()
+    {
+        echo 'token: ' . password_hash('123456', PASSWORD_DEFAULT);
+    }
+
     public function store()
     {
         helper(['form', 'url', 'text']);

@@ -6,11 +6,11 @@
 
     <link rel="stylesheet" type="text/css" href="<?= base_url('css/spinner.css') ?>">
     <link rel="stylesheet" type="text/css" href="<?= base_url('css/main.css') ?>">
+    <link rel="stylesheet" type="text/css" href="<?= base_url('css/bg.css') ?>">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
@@ -29,13 +29,30 @@
 
     </div>
 
+    <div class="area">
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
     <div class="ui-container fadeable" id="ui-container">
         <div class="ui-content" id="ui-content">
 
             <div class="score-display-container" id="score-display-container" style="display:none;">
                 <div id="score-display"> <b>Gained Point</b>&nbsp; 0</div>
             </div>
-            <h2 id="learningword" style="text-transform: uppercase;"> Hello World </h2>
+            <h2 id="learningword" style="text-transform: uppercase;font-size: 100px;"> Hello World
+            </h2>
+            <br>
             <div class="word-input-container" style="display:none;">
                 <div class="guess-input-container">
                     <input type="text" class="guessword-input" id="guessword-input" placeholder="Your Guess">
@@ -46,9 +63,9 @@
             </div>
 
             <div class="button-controls-container" id="button-controls-container" style="max-width:330px;">
-                <button class="button control-button" id="new-word-button" style="margin-left: 0;">Change
-                    letter</button>
-                <button class="button control-button fingerspell-button" id="play-button">Spell letter</button>
+                <button class="button control-button" id="new-word-button" style="margin-left: 0;">New
+                    Letter</button>
+                <button class="button control-button fingerspell-button" id="play-button">Spell Letter</button>
             </div>
 
             <div class="collapsible" id="settings-collapsible">
@@ -248,7 +265,7 @@
 
         function setNewWordToGuess() {
             wordToGuess = wordList[Math.floor(Math.random() * wordList.length)].replace(/[\r\n]+/gm, '');
-            document.getElementById('learningword').innerHTML = "Letter: &nbsp;" + wordToGuess;
+            document.getElementById('learningword').innerHTML = wordToGuess;
             console.log(wordToGuess);
         }
 

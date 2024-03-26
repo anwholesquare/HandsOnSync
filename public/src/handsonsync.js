@@ -32,7 +32,7 @@ async function init(modelPath) {
 
     backgroundCamera = new THREE.PerspectiveCamera(45, document.body.clientWidth / document.body.clientHeight, 1, 10);
 
-    backgroundRenderer = new THREE.WebGLRenderer({ antialias: true });
+    backgroundRenderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     backgroundRenderer.setPixelRatio(window.devicePixelRatio);
     backgroundRenderer.setSize(document.body.clientWidth, document.body.clientHeight);
 
@@ -43,6 +43,7 @@ async function init(modelPath) {
     addGradientBackground();
 
     scene = new THREE.Scene();
+
 
     camera = new THREE.PerspectiveCamera(45, width / height, 1, 20);
     camera.position.set(0, .7, 10);
@@ -337,10 +338,10 @@ function animate() {
     if (mixer) mixer.update(deltaTime);
 
     if (useHighQuality) {
-        backgroundComposer.render();
+        // backgroundComposer.render();
         composer.render();
     } else {
-        if (backgroundRenderer) backgroundRenderer.render(backgroundScene, backgroundCamera);
+        // if (backgroundRenderer) backgroundRenderer.render(backgroundScene, backgroundCamera);
         renderer.render(scene, camera);
     }
 }

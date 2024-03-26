@@ -1,12 +1,35 @@
+body {
+  background: #212121 !important
+}
+
+.nav-item a {
+  color: white;
+  text-decoration: none;
+}
+
+
+.offcanvas-header {
+  display: none;
+}
+
+tr {
+  vertical-align: middle;
+}
+
 .bi {
   display: inline-block;
   width: 1rem;
   height: 1rem;
 }
 
+
 .btn-primary {
-  background: #36b7ff !important;
+  background: #000645 !important;
   border: none;
+}
+
+#sidebarMenu {
+  background: #202020;
 }
 
 .offcanvas-header {

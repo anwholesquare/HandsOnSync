@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="blog management">
     <meta name="author" content="Khandoker Anan">
-    <meta name="description" content="Lazyblog system">
-    <meta property="og:title" content="Lazyblog Landing Page">
-    <meta property="og:description" content="Sign up now to start blogging">
+    <meta name="description" content="HandsOnSync">
+    <link rel="icon" type="image/png" href="<?= base_url() ?>/favicon.png">
+    <meta property="og:title" content="HandsOnSync">
+    <meta property="og:description" content="Learn ASL Easily">
     <meta property="og:type" content="website">
     <meta property="og:image" content="./assets/images/common/og-image.jpg">
 
@@ -22,7 +22,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap" rel="stylesheet">
 
-    <title>Lazyblog</title>
+    <title>HandsOnSync</title>
 
 </head>
 
@@ -31,10 +31,18 @@
     data-mobile-nav-align="left">
     <div id="wrap">
         <style>
+            body {
+                background-color: #212121;
+            }
+
             #logocover {
                 display: flex;
                 margin-top: 100px;
                 justify-content: center;
+            }
+
+            h1 {
+                color: white;
             }
         </style>
         <div id="logocover">

@@ -6,10 +6,10 @@
 </svg>
 
 <header class="navbar sticky-top flex-md-nowrap p-0 shadow" data-bs-theme="dark"
-    style="position:fixed;width:100%;background:#202020;border-bottom: 5px solid #36b7ff7a;">
-    <a class="col-md-3 col-lg-2 me-0 fs-6 text-white" href="#">
-        <div style="height:50px;display: flex;width:auto;justify-content: center;align-items:center;">
-            <img src="/assets/logo.png" style="height:40px;width:auto;" />
+    style="position:fixed;width:100%;background:#202020; box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5) !important;">
+    <a class="col-md-12 col-lg-12 me-0 fs-6 text-white" href="#">
+        <div style="height:50px;display:flex;width:auto;justify-content: center;align-items:center;">
+            <img src="/assets/logo.png" style="height:50px;width:auto;" />
         </div>
     </a>
 

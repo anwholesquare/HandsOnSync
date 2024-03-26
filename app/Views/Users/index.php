@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="<?= base_url() ?>/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
         <?= $user[0]['full_name'] ?>'s Page
@@ -44,19 +45,28 @@
         .card-body {
             color: black;
         }
+
+        #bg {
+            position: fixed;
+            height: 100vh;
+            margin: 0;
+            width: 100vw;
+            overflow: hidden !important;
+            z-index: -1000 !important;
+        }
     </style>
 </head>
 
 <body>
 
-    <div id="bg" style="position: fixed;height:100vh; margin:0; width: 100vw;overflow:hidden !important;">
+    <div id="bg">
         <div id='stars'></div>
         <div id='stars2'></div>
         <div id='stars3'></div>
     </div>
 
     <header class="navbar sticky-top flex-md-nowrap p-0 shadow" data-bs-theme="dark"
-        style="position:fixed;width:100%;background:#202020;border-bottom: 5px solid #36b7ff7a;display:flex;justify-content:center;">
+        style="position:fixed;width:100%;background:#202020;border-bottom: 5px solid #0006457a;display:flex;justify-content:center;">
         <a class="col-md-12 col-lg-12 me-0 fs-6 text-white" href="#">
             <div style="height:50px;display: flex;width:auto;justify-content: center;">
                 <img src="/assets/logo.png" style="height:50px;width:auto;" />

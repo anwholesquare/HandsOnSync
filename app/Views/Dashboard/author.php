@@ -42,14 +42,14 @@
 
 
                 <h2>Author's settings</h2>
-                <?php if (isset($validation)): ?>
+                <?php if (isset ($validation)): ?>
                     <br>
                     <div class="alert alert-danger" role="alert">
                         <?= $validation->listErrors() ?>
                     </div>
                 <?php endif; ?>
 
-                <?php if (isset($error)): ?>
+                <?php if (isset ($error)): ?>
                     <br>
                     <div class="alert alert-warning" role="alert">
                         <?= $error ?>
@@ -67,7 +67,7 @@
                                 <label for="content" style="margin-bottom:10px;">Content</label>
                                 <textarea class="form-control" id="editor" name="content" rows="10">
                                 <?php if (count($author) > 0)
-                                    print(str_replace('"', "'", $author[0]['page_content'])); ?>
+                                    print (str_replace('"', "'", $author[0]['page_content'])); ?>
                                 </textarea>
                             </div>
 

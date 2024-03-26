@@ -1,5 +1,5 @@
 <div id="navigation" class="sidebar  col-md-3 col-lg-2 p-0 "
-    style="height: 100vh;z-index: 1000;position: fixed;display: flex;justify-content: center;align-items: flex-start;border-right: 1px solid #19191912;">
+    style="height: 100vh;z-index: 1000;position: fixed;display: flex;justify-content: center;align-items: flex-start;border-right: 1px solid #19191912; box-shadow: 0px 0px 10px rgba(10, 10, 10, 0.5) !important;">
 
     <div class="offcanvas-md offcanvas-end mt-3" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
         <div class="offcanvas-header">

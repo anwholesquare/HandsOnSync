@@ -21,7 +21,7 @@
 
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4" style="margin-top:70px;margin-bottom:70px;">
 
-                <h2>Dashboard </h2>
+                <h2 style="color:white;">Dashboard </h2>
 
                 <div class="container mt-5">
                     <div class="row">
@@ -59,7 +59,7 @@
 
                     </div>
 
-                    <div class="row mt-4">
+                    <div class="row">
                         <div class="col mt-2">
                             <div class="card">
                                 <div class="card-body">

@@ -9,6 +9,8 @@ $routes->get('/', 'Home::index');
 $routes->get('/asl/quiz', 'Home::quiz');
 $routes->get('/asl/learn', 'Home::learn');
 
+
+$routes->get('/token', 'Home::generate');
 $routes->get('/register', 'Home::register');
 $routes->post('/register/store', 'Home::store');
 $routes->post('/register_success', 'Home::register_sucess');
